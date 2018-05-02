@@ -23,6 +23,9 @@
 #include "vrsettings.h"
 #include "view/vrthemedata.h"
 
+#include "model/vrmetrics.h"
+#include "model/vrmetricsmanager.h"
+
 void messageHandler(QtMsgType type, const QMessageLogContext &context, const QString &msg)
 {
 #ifdef Q_OS_WIN32
@@ -92,12 +95,29 @@ int main(int argc, char *argv[])
     }
 
     /*
+     * start Metrics calculation
+     */
+    QSharedPointer<VRMetrics> vrMetrics;
+    QSharedPointer<VRMetricsManager> vrMetricsManger;
+
+    vrMetrics = QSharedPointer<VRMetrics>(new VRMetrics());
+    vrMetricsManger = QSharedPointer<VRMetricsManager>(
+                new VRMetricsManager(vrMetrics, vrData));
+
+    QThread* metricsManagerThread = new QThread;
+    vrMetricsManger->moveToThread(metricsManagerThread);
+    QObject::connect(metricsManagerThread, SIGNAL(started()),
+                     vrMetricsManger.data(), SLOT(start()));
+    metricsManagerThread->start();
+
+    /*
      * expose Data-Objects to qml
      */
     engine->rootContext()->setContextProperty("vrMainWindow", mainWindow.data());
     engine->rootContext()->setContextProperty("vrData", vrData.data());
     engine->rootContext()->setContextProperty("settings", &settings);
     engine->rootContext()->setContextProperty("theme", &themeData);
+    engine->rootContext()->setContextProperty("vrMetrics", vrMetrics.data());
 
     /*
      * QML-Type Registration
@@ -116,6 +136,14 @@ int main(int argc, char *argv[])
     if (engine->rootObjects().isEmpty())
         return EXIT_FAILURE;
     int retVal = app.exec();
+
+    /*
+     * tidy up the running threads
+     */
+    vrMetricsManger->abort();
+    metricsManagerThread->quit();
+    metricsManagerThread->wait();
+
     return retVal;
 }
 

@@ -33,7 +33,9 @@ SOURCES += \
     view/vrplotvelocity.cpp \
     main.cpp \
     vrsettings.cpp \
-    view/vrthemedata.cpp
+    view/vrthemedata.cpp \
+    model/vrmetrics.cpp \
+    model/vrmetricsmanager.cpp
 
 TRANSLATIONS = Deutsch.ts
 
@@ -71,4 +73,6 @@ HEADERS += \
     view/vrplotrpm.h \
     view/vrplotvelocity.h \
     vrsettings.h \
-    view/vrthemedata.h
+    view/vrthemedata.h \
+    model/vrmetrics.h \
+    model/vrmetricsmanager.h
