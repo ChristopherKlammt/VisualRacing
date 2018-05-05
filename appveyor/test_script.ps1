@@ -10,7 +10,6 @@ foreach ($file in $folder) {
     gcov $file
 }
 dir
-
-gcovr -h
+gcovr -r
 
 popd
