@@ -11,10 +11,10 @@ echo "Running Tests"
 #}
 #dir
 echo "Running gcovr"
-gcovr -r
+gcovr -r -k
 
 echo "Running gcovr XML"
-gcovr -r --xml-pretty -o coverage.xml
+gcovr -r - -g -x > coverage.xml
 
 dir
 
