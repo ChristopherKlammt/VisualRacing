@@ -6,6 +6,10 @@ build_script:
   - cd VisualRacing 
   - qmake VisualRacing.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug" 
   - mingw32-make
+  - cd VRTest
+  - copy *.cpp ./debug
+  - dir
+  - cd ../
 
 test_script:
   - powershell -file "../appveyor/test_script.ps1"
