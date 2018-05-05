@@ -7,8 +7,8 @@ build_script:
   - qmake VisualRacing.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug" 
   - mingw32-make
   - cd VRTest && copy *.cpp debug
-  - cd ../VRMain && copy vrsettings.cpp ../VRTest/debug
-  - cd view && copy vrthemedata.cpp ../../VRTest/debug
+  - cd ../VRMain && copy vrsettings.cpp "../VRTest/debug"
+  - cd view && copy vrthemedata.cpp "../../VRTest/debug"
 
 test_script:
   - powershell -file "../appveyor/test_script.ps1"
