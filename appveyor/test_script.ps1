@@ -11,10 +11,10 @@ echo "Running Tests"
 #}
 #dir
 echo "Running gcovr"
-python C:\Python36\Scripts\gcovr
+python C:\Python27\Scripts\gcovr
 
 echo "Running gcovr XML"
-python C:\Python36\Scripts\gcovr -x > coverage.xml
+python C:\Python27\Scripts\gcovr -x > coverage.xml
 
 dir
 

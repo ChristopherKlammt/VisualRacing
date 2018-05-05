@@ -1,6 +1,6 @@
 install:
   - set QTDIR=C:\Qt\5.9\mingw53_32
-  - set PATH=%PATH%;%QTDIR%\bin;C:\Qt\Tools\mingw530_32\bin;C:\Python36
+  - set PATH=%PATH%;%QTDIR%\bin;C:\Qt\Tools\mingw530_32\bin
   - pip install gcovr
 
 build_script:
