@@ -14,6 +14,7 @@ build_script:
 
 test_script:
   - powershell -file "../appveyor/test_script.ps1"
+  - powershell -file "../appveyor/coverage_script.ps1"
 
 on_finish:
   - powershell -file "../appveyor/upload_script.ps1"
