@@ -9,6 +9,7 @@ build_script:
   - cd VRTest && copy *.cpp debug
   - cd ../VRMain && copy vrsettings.cpp "../VRTest/debug"
   - cd view && copy vrthemedata.cpp "../../VRTest/debug"
+  - cd ../../
 
 test_script:
   - powershell -file "../appveyor/test_script.ps1"
