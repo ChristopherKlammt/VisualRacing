@@ -14,6 +14,8 @@ echo "Running gcovr"
 gcovr -r
 
 echo "Running gcovr XML"
-gcovr -r -x
+gcovr -r --xml-pretty -o coverage.xml
+
+dir
 
 popd

@@ -10,11 +10,15 @@ TEMPLATE = app
 
 QMAKE_CXXFLAGS += \
     -fprofile-arcs \
-    -ftest-coverage
+    -ftest-coverage \
+    -g \
+    -O0
 
 QMAKE_LDFLAGS += \
     -fprofile-arcs \
-    -ftest-coverage
+    -ftest-coverage \
+    -g \
+    -O0
 
 LIBS += -lgcov
 
