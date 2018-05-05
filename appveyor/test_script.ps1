@@ -3,15 +3,8 @@ echo "Running Tests"
 .\tst_vrtest.exe
 .\tst_vrtest.exe -xunitxml > tests.xml
 
-#$folder = Get-ChildItem -Path *.cpp
-
-# Loop through each file
-#foreach ($file in $folder) {
-#    gcov $file
-#}
-#dir
 echo "Running gcovr"
-python C:\Python27\Scripts\gcovr
+python C:\Python27\Scripts\gcovr --xml-pretty
 
 echo "Running gcovr XML"
 python C:\Python27\Scripts\gcovr --xml -o coverage.xml
