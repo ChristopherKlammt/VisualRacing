@@ -11,4 +11,6 @@ foreach ($file in $folder) {
 }
 dir
 
+gcovr -h
+
 popd
