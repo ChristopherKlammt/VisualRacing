@@ -1,7 +1,4 @@
-echo "Running gcovr"
-python C:\Python27\Scripts\gcovr --xml-pretty
-
-echo "Running gcovr XML"
+echo "Running gcovr and outputting XML"
 python C:\Python27\Scripts\gcovr --xml -o coverage.xml
 
 Invoke-WebRequest -Uri 'https://codecov.io/bash' -OutFile codecov.sh
