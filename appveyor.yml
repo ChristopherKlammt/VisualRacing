@@ -7,7 +7,7 @@ build_script:
   - qmake VisualRacing.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug" 
   - mingw32-make
   - cd VRTest
-  - copy *.cpp ./debug
+  - copy *.cpp debug
   - dir
   - cd ../
 
