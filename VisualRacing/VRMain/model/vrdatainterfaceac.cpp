@@ -22,20 +22,20 @@ VRDataInterfaceAC::~VRDataInterfaceAC() {
 bool VRDataInterfaceAC::start() {
     // TODO: Print more detailed error descriptions.
     if (this->accessStatic->attach(QSharedMemory::AccessMode::ReadOnly))
-        this->nativeBufferStatic = (SPageFileStatic*)this->accessStatic->data();
+        this->nativeBufferStatic = static_cast<SPageFileStatic*>(this->accessStatic->data());
     else {
         return false;
     }
 
     if (this->accessPhysics->attach(QSharedMemory::AccessMode::ReadOnly))
-        this->nativeBufferPhysics = (SPageFilePhysics*)this->accessPhysics->data();
+        this->nativeBufferPhysics = static_cast<SPageFilePhysics*>(this->accessPhysics->data());
     else {
         this->accessStatic->detach();
         return false;
     }
 
     if(this->accessGraphics->attach(QSharedMemory::AccessMode::ReadOnly))
-        this->nativeBufferGraphics = (SPageFileGraphics*)this->accessGraphics->data();
+        this->nativeBufferGraphics = static_cast<SPageFileGraphics*>(this->accessGraphics->data());
     else {
         this->accessStatic->detach();
         this->accessPhysics->detach();
