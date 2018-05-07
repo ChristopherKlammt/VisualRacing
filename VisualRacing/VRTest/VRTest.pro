@@ -1,9 +1,3 @@
-#-------------------------------------------------
-#
-# Project created by QtCreator 2018-05-02T13:29:43
-#
-#-------------------------------------------------
-
 QT       += testlib
 
 QT       -= gui
@@ -13,6 +7,20 @@ CONFIG   += console
 CONFIG   -= app_bundle
 
 TEMPLATE = app
+
+QMAKE_CXXFLAGS += \
+    -fprofile-arcs \
+    -ftest-coverage \
+    -g \
+    -O0
+
+QMAKE_LDFLAGS += \
+    -fprofile-arcs \
+    -ftest-coverage \
+    -g \
+    -O0
+
+LIBS += -lgcov
 
 # The following define makes your compiler emit warnings if you use
 # any feature of Qt which has been marked as deprecated (the exact warnings

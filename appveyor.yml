@@ -1,14 +1,20 @@
 install:
   - set QTDIR=C:\Qt\5.9\mingw53_32
   - set PATH=%PATH%;%QTDIR%\bin;C:\Qt\Tools\mingw530_32\bin
+  - pip install gcovr
 
 build_script:
   - cd VisualRacing 
   - qmake VisualRacing.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug" 
   - mingw32-make
+  - cd VRTest && copy *.cpp debug
+  - cd ../VRMain && copy vrsettings.cpp "../VRTest/debug"
+  - cd view && copy vrthemedata.cpp "../../VRTest/debug"
+  - cd ../../
 
 test_script:
   - powershell -file "../appveyor/test_script.ps1"
+  - powershell -file "../appveyor/coverage_script.ps1"
 
 on_finish:
   - powershell -file "../appveyor/upload_script.ps1"
