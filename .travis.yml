@@ -6,17 +6,6 @@ matrix:
 dist: trusty
 sudo: required
 
-deploy:
-  provider: releases
-  api_key:
-    secure: oE0NqBweX1YDO2AwARAXhhGSoIKQXC/ogX/thFM317eSWUh04CjWjP+cRyViFZFcv051otpG4k3Y+MN8n6lQWleYoVv6D6PkfOZ1Zr/dawqsTTiyXvUJ049llhfMQOzcE8rOR5vwH6Ywf3kOH6vUcAtTA9Asw2v3OYV7Z2WDEiYcsdPfPo+3PwW6UM23UhYYt9eO2UbzslmmZQRbexBzTxOADL6vlQmA6RyOnWdXTZHvL0AmjLo50MP1SGNI4RWeVg/NaCAG1QWKXJ2wpZyWDKwwetrgG33+RD0Sp+gMKh1RoZhb6Ou2OIDg9qMl0IXOi5wivvFf4FJ6RH2u2fOL32CNXcsW/oT4wMBSaOzj6QJIqDRQ262iRxJTj9WFBjlOeIUmyoF+9qCCTGhVepAd+2cbayGxYwP7qr/ETjxsAbQAOr8ahGYz6P2j2aTVsQ9bneW4wwDb31Fry6zjk5BIQjKWx/u3HCtTPLwegyFB9Yz89ws9pqirTpucTvnmKR6fU+OZq3SdPQ5NQjjeZE7ozjoIAzt+4IOYdPfKVW2J2BC3OsMBkSBMZdtay8TsGDCEwfvS9adPXcYMhVZPW6l9Owvzdnpncc0IidMii/lgIAF1esFamc8+bLXcoG3smGqt0330vKVP+5Ajq5+UN8s782m5a0p8L3viby+v1ODad/E=
-  file: "VRMain/release/VRMain.exe"
-  on:
-    repo: VisualRacing/VisualRacing
-    all_branches: true
-    tags: true
-  skip_cleanup: true
-
 before_install:
 - "${TRAVIS_BUILD_DIR}/travis-ci/get-dependencies.sh"
 
@@ -26,7 +15,3 @@ before_script:
 script:
 - if [ $QT = qt5win ]; then PATH=$PATH:/usr/lib/mxe/usr/bin; fi
 - make -j 2
-- cd VRMain
-- ls -la
-- cd release
-- ls -la
