@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Bouml (http://bouml.free.fr/) -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="670" height="836" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<g>
+	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="162" y="27" width="2" height="90" />
+	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="30" y="115" width="134" height="2" />
+	<rect fill="#ededed" stroke="black" stroke-width="1" stroke-opacity="1" x="27" y="24" width="135" height="91" />
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="95" y="27">VRMainWindow</text>
+	<line stroke="black" stroke-opacity="1" x1="27" y1="29" x2="162" y2="29" />
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="28" y="32">itsMessages : QVector&lt;QSharedPointer&lt;VRMessage&gt;&gt;</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="28" y="37">itsCurrentTab : int</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="28" y="42">itsLastTab : int</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="28" y="47">engine : QQmlApplicationEngine</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="28" y="52">currentTranslator : QTranslator</text>
+	<line stroke="black" stroke-opacity="1" x1="27" y1="54" x2="162" y2="54" />
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="28" y="57">VRMainWindow(inout parent : QObject = nullptr)</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="28" y="62">getItsMessages() : QSharedPointer&lt;QVector&lt;QSharedPointer&lt;VRMessage&gt;&gt;&gt;</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="28" y="67">setItsCurrentMessage(in value : QSharedPointer&lt;VRMessage&gt;) : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="28" y="72">getItsCurrentTab() : Q_INVOKABLE int</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="28" y="77">setItsCurrentTab(in value : int) : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="28" y="82">getItsLastTab() : Q_INVOKABLE int</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="28" y="87">setItsLastTab(in value : int) : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="28" y="92">switchLanguage(in language : VRSettings::Language) : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="28" y="97">setEngine(in engine : QSharedPointer&lt;QQmlApplicationEngine&gt;) : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="28" y="102">itsCurrentMessageChanged() : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="28" y="107">languageChanged() : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="28" y="112">initMessages() : void</text>
+</g>
+<g>
+	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="149" y="512" width="2" height="106" />
+	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="79" y="616" width="72" height="2" />
+	<rect fill="#ededed" stroke="black" stroke-width="1" stroke-opacity="1" x="76" y="509" width="73" height="107" />
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="113" y="512">VRSettings</text>
+	<line stroke="black" stroke-opacity="1" x1="76" y1="514" x2="149" y2="514" />
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="77" y="517">path : QString</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="77" y="522">lang : Language</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="77" y="527">theme : Theme</text>
+	<line stroke="black" stroke-opacity="1" x1="76" y1="529" x2="149" y2="529" />
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="77" y="532">getUnit() : Unit</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="77" y="537">setUnit(in value : Unit) : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="77" y="542">getLang() : Language</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="77" y="547">setLang(in value : Language) : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="77" y="552">getTheme() : Theme</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="77" y="557">setTheme(in value : Theme) : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" text-decoration="underline" x="77" y="562">parseUnit(in arg : QString) : Unit</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" text-decoration="underline" x="77" y="567">parseLanguage(in arg : QString) : Language</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" text-decoration="underline" x="77" y="572">parseTheme(in arg : QString) : Theme</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="77" y="577">unitAsString() : QString</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="77" y="582">languageAsString() : QString</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="77" y="587">themeAsString() : QString</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="77" y="592">unitChanged() : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="77" y="597">langChanged() : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="77" y="602">themeChanged() : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="77" y="607">save() : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="77" y="612">load() : void</text>
+</g>
+<g>
+	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="290" y="621" width="2" height="18" />
+	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="218" y="637" width="74" height="2" />
+	<rect fill="#ededed" stroke="black" stroke-width="1" stroke-opacity="1" x="215" y="618" width="75" height="19" />
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="253" y="621">VRUtilities</text>
+	<line stroke="black" stroke-opacity="1" x1="215" y1="623" x2="290" y2="623" />
+	<line stroke="black" stroke-opacity="1" x1="215" y1="625" x2="290" y2="625" />
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" text-decoration="underline" x="216" y="628">isProcessRunning(in name : wchar_t) : bool</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" text-decoration="underline" x="216" y="633">getCurrentTime() : std::chrono::milliseconds</text>
+</g>
+<g>
+	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="494" y="34" width="2" height="120" />
+	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="410" y="152" width="86" height="2" />
+	<rect fill="#ededed" stroke="black" stroke-width="1" stroke-opacity="1" x="407" y="31" width="87" height="121" />
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="451" y="34">VRThemeData</text>
+	<line stroke="black" stroke-opacity="1" x1="407" y1="36" x2="494" y2="36" />
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="408" y="39">appBackgroundColor : QString</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="408" y="44">tabBackgroundColor : QString</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="408" y="49">tabInactiveColor : QString</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="408" y="54">accentColor : QString</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="408" y="59">textColor : QString</text>
+	<line stroke="black" stroke-opacity="1" x1="407" y1="61" x2="494" y2="61" />
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="408" y="64">VRThemeData(in theme : VRSettings::Theme)</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="408" y="69">changeTheme(in theme : VRSettings::Theme) : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="408" y="74">getAppBackgroundColor() : QString</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="408" y="79">setAppBackgroundColor(in value : QString) : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="408" y="84">getTabBackgroundColor() : QString</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="408" y="89">setTabBackgroundColor(in value : QString) : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="408" y="94">getTabInactiveColor() : QString</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="408" y="99">setTabInactiveColor(in value : QString) : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="408" y="104">getAccentColor() : QString</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="408" y="109">setAccentColor(in value : QString) : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="408" y="114">getTextColor() : QString</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="408" y="119">setTextColor(in value : QString) : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="408" y="124">appBackgroundColorChanged() : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="408" y="129">tabBackgroundColorChanged() : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="408" y="134">tabInactiveColorChanged() : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="408" y="139">accentColorChanged() : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="408" y="144">textColorChanged() : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="408" y="149">themeChanged() : void</text>
+</g>
+<g>
+	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="383" y="245" width="2" height="80" />
+	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="245" y="323" width="140" height="2" />
+	<rect fill="#ededed" stroke="black" stroke-width="1" stroke-opacity="1" x="242" y="242" width="141" height="81" />
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" font-style="italic" text-anchor="middle" x="313" y="245">VRPlotItem</text>
+	<line stroke="black" stroke-opacity="1" x1="242" y1="247" x2="383" y2="247" />
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="243" y="250">itsCustomPlot : QCustomPlot</text>
+	<line stroke="black" stroke-opacity="1" x1="242" y1="252" x2="383" y2="252" />
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="243" y="255">VRPlotItem(inout parent : QQuickItem = 0)</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="243" y="260">~VRPlotItem()</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="243" y="265">paint(inout painter : QPainter) : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="243" y="270">initCustomPlot(inout themeData : VRThemeData) : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-style="italic" x="243" y="275">setupPlot(inout customPlot : QCustomPlot, inout themeData : VRThemeData) : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-style="italic" x="243" y="280">setTheme(inout themeData : VRThemeData) : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="243" y="285">routeMouseEvents(inout event : QMouseEvent) : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="243" y="290">mousePressEvent(inout event : QMouseEvent) : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="243" y="295">mouseReleaseEvent(inout event : QMouseEvent) : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="243" y="300">mouseMoveEvent(inout event : QMouseEvent) : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="243" y="305">mouseDoubleClickEvent(inout event : QMouseEvent) : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="243" y="310">graphClicked(inout plottable : QCPAbstractPlottable) : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="243" y="315">onCustomReplot() : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="243" y="320">updateCustomPlotSize() : void</text>
+</g>
+<g>
+	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="655" y="531" width="2" height="292" />
+	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="597" y="821" width="60" height="2" />
+	<rect fill="#ededed" stroke="black" stroke-width="1" stroke-opacity="1" x="594" y="528" width="61" height="293" />
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="625" y="531">VRData</text>
+	<line stroke="black" stroke-opacity="1" x1="594" y1="533" x2="655" y2="533" />
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="595" y="536">startTime : std::chrono::milliseconds</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="595" y="541">completedLaps : int</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="595" y="546">gear : int</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="595" y="551">velocity : float</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="595" y="556">rpm : int</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="595" y="561">maxRpm : int</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="595" y="566">throttle : float</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="595" y="571">brake : float</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="595" y="576">clutch : float</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="595" y="581">tirePressureFL : float</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="595" y="586">tirePressureFR : float</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="595" y="591">tirePressureRR : float</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="595" y="596">tirePressureRL : float</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="595" y="601">tireWearFL : float</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="595" y="606">tireWearFR : float</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="595" y="611">tireWearRR : float</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="595" y="616">tireWearRL : float</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="595" y="621">tireDirtFL : float</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="595" y="626">tireDirtFR : float</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="595" y="631">tireDirtRR : float</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="595" y="636">tireDirtRL : float</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="595" y="641">tireTemperatureFLI : float</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="595" y="646">tireTemperatureFLC : float</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="595" y="651">tireTemperatureFLO : float</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="595" y="656">tireTemperatureFRI : float</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="595" y="661">tireTemperatureFRC : float</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="595" y="666">tireTemperatureFRO : float</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="595" y="671">tireTemperatureRRI : float</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="595" y="676">tireTemperatureRRC : float</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="595" y="681">tireTemperatureRRO : float</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="595" y="686">tireTemperatureRLI : float</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="595" y="691">tireTemperatureRLC : float</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="595" y="696">tireTemperatureRLO : float</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="595" y="701">brakeTemperatureFL : float</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="595" y="706">brakeTemperatureFR : float</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="595" y="711">brakeTemperatureRR : float</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="595" y="716">brakeTemperatureRL : float</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="595" y="721">fuel : float</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="595" y="726">maxFuel : float</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="595" y="731">brakeBias : float</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="595" y="736">pitLimiter : bool</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="595" y="741">isInPitlane : bool</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="595" y="746">currentLapTime : float</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="595" y="751">bestLapTime : float</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="595" y="756">previousLapTime : float</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="595" y="761">currentS1 : float</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="595" y="766">currentS2 : float</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="595" y="771">currentS3 : float</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="595" y="776">bestS1 : float</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="595" y="781">bestS2 : float</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="595" y="786">bestS3 : float</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="595" y="791">previousS1 : float</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="595" y="796">previousS2 : float</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="595" y="801">previousS3 : float</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="595" y="806">tBestS1 : float</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="595" y="811">tBestS2 : float</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="595" y="816">tBestS3 : float</text>
+</g>
+<g>
+	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="339" y="53" width="2" height="36" />
+	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="259" y="87" width="82" height="2" />
+	<rect fill="#ededed" stroke="black" stroke-width="1" stroke-opacity="1" x="256" y="50" width="83" height="37" />
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="298" y="53">VRMessage</text>
+	<line stroke="black" stroke-opacity="1" x1="256" y1="55" x2="339" y2="55" />
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="257" y="58">itsColor : QColor</text>
+	<line stroke="black" stroke-opacity="1" x1="256" y1="60" x2="339" y2="60" />
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="257" y="63">VRMessage(in label : QString, in color : QColor)</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="257" y="68">getItsLabel() : QString</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="257" y="73">setItsLabel(in value : QString) : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="257" y="78">getItsColor() : QColor</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="257" y="83">setItsColor(in value : QColor) : void</text>
+</g>
+<g>
+	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="174" y="373" width="2" height="56" />
+	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="36" y="427" width="140" height="2" />
+	<rect fill="#ededed" stroke="black" stroke-width="1" stroke-opacity="1" x="33" y="370" width="141" height="57" />
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="104" y="373">VRPlotRPM</text>
+	<line stroke="black" stroke-opacity="1" x1="33" y1="375" x2="174" y2="375" />
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="34" y="378">itsMaxRpm : int</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="34" y="383">itsGearMultiplier : double</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="34" y="388">itsLastGear : int</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="34" y="393">itsLastGearDouble : double</text>
+	<line stroke="black" stroke-opacity="1" x1="33" y1="395" x2="174" y2="395" />
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="34" y="398">VRPlotRPM()</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="34" y="403">setupPlot(inout customPlot : QCustomPlot, inout themeData : VRThemeData) : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="34" y="408">setItsMaxRpm(in maxRpm : int) : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="34" y="413">pushData(in index : double, in data : double, in gear : int) : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="34" y="418">setTheme(inout themeData : VRThemeData) : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="34" y="423">changeLanguage() : void</text>
+</g>
+<g>
+	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="483" y="496" width="2" height="46" />
+	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="411" y="540" width="74" height="2" />
+	<rect fill="#ededed" stroke="black" stroke-width="1" stroke-opacity="1" x="408" y="493" width="75" height="47" />
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" font-style="italic" text-anchor="middle" x="446" y="496">VRDataInterface</text>
+	<line stroke="black" stroke-opacity="1" x1="408" y1="498" x2="483" y2="498" />
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="409" y="501">processName : wchar_t</text>
+	<line stroke="black" stroke-opacity="1" x1="408" y1="503" x2="483" y2="503" />
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="409" y="506">VRDataInterface(in processName : wchar_t)</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="409" y="511">~VRDataInterface()</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-style="italic" x="409" y="516">start() : bool</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-style="italic" x="409" y="521">stop() : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-style="italic" x="409" y="526">update() : bool</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="409" y="531">getBuffer() : QSharedPointer&lt;VRData&gt;</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="409" y="536">getProcessName() : wchar_t</text>
+</g>
+<g>
+	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="642" y="245" width="2" height="80" />
+	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="460" y="323" width="184" height="2" />
+	<rect fill="#ededed" stroke="black" stroke-width="1" stroke-opacity="1" x="457" y="242" width="185" height="81" />
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="550" y="245">VRPlotLapTimeBar</text>
+	<line stroke="black" stroke-opacity="1" x1="457" y1="247" x2="642" y2="247" />
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="458" y="250">sectorOne : QCPBars</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="458" y="255">sectorTwo : QCPBars</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="458" y="260">sectorThree : QCPBars</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="458" y="265">ticks : double</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="458" y="270">labels : QString</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="458" y="275">sectorOne_data : double</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="458" y="280">sectorTwo_data : double</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="458" y="285">sectorThree_data : double</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="458" y="290">sum_vect : double</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="458" y="295">counter : int</text>
+	<line stroke="black" stroke-opacity="1" x1="457" y1="297" x2="642" y2="297" />
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="458" y="300">VRPlotLapTimeBar()</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="458" y="305">setupPlot(inout customPlot : QCustomPlot, inout themeData : VRThemeData) : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="458" y="310">setTheme(inout themeData : VRThemeData) : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="458" y="315">pushData(in lap_time : double, in sector1 : double, in sector2 : double, in sector3 : double, in best : double) : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="458" y="320">changeLanguage() : void</text>
+</g>
+<g>
+	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="644" y="405" width="2" height="32" />
+	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="500" y="435" width="146" height="2" />
+	<rect fill="#ededed" stroke="black" stroke-width="1" stroke-opacity="1" x="497" y="402" width="147" height="33" />
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="571" y="405">VRPlotPedalHistory</text>
+	<line stroke="black" stroke-opacity="1" x1="497" y1="407" x2="644" y2="407" />
+	<line stroke="black" stroke-opacity="1" x1="497" y1="409" x2="644" y2="409" />
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="498" y="412">VRPlotPedalHistory()</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="498" y="417">setupPlot(inout customPlot : QCustomPlot, inout themeData : VRThemeData) : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="498" y="422">setTheme(inout themeData : VRThemeData) : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="498" y="427">pushData(in index : double, in clutch : double, in brake : double, in throttle : double) : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="498" y="432">changeLanguage() : void</text>
+</g>
+<g>
+	<line stroke="#000000" stroke-opacity="1" x1="537" y1="401" x2="391" y2="323" />
+	<line stroke="#000000" stroke-opacity="1" x1="386" y1="321" x2="388" y2="329" />
+	<line stroke="#000000" stroke-opacity="1" x1="386" y1="321" x2="394" y2="318" />
+	<line stroke="#000000" stroke-opacity="1" x1="388" y1="329" x2="394" y2="318" />
+</g>
+<g>
+	<line stroke="#000000" stroke-opacity="1" x1="456" y1="284" x2="392" y2="284" />
+	<line stroke="#000000" stroke-opacity="1" x1="386" y1="284" x2="392" y2="290" />
+	<line stroke="#000000" stroke-opacity="1" x1="386" y1="284" x2="392" y2="278" />
+	<line stroke="#000000" stroke-opacity="1" x1="392" y1="290" x2="392" y2="278" />
+</g>
+<g>
+	<line stroke="black" stroke-opacity="1" x1="255" y1="70" x2="249" y2="64" />
+	<line stroke="black" stroke-opacity="1" x1="255" y1="70" x2="249" y2="76" />
+	<line stroke="black" stroke-opacity="1" x1="165" y1="70" x2="255" y2="70" />
+	<polygon fill="#000000" stroke="black" stroke-opacity="1" points="165,70 171,64 177,70 171,76" />
+</g>
+<g>
+	<line stroke="#000000" stroke-opacity="1" x1="158" y1="369" x2="235" y2="324" />
+	<line stroke="#000000" stroke-opacity="1" x1="241" y1="321" x2="232" y2="318" />
+	<line stroke="#000000" stroke-opacity="1" x1="241" y1="321" x2="238" y2="329" />
+	<line stroke="#000000" stroke-opacity="1" x1="232" y1="318" x2="238" y2="329" />
+</g>
+<g>
+	<line stroke="black" stroke-opacity="1" x1="486" y1="519" x2="496" y2="520" />
+	<polygon fill="#000000" stroke="black" stroke-opacity="1" points="486,519 492,513 497,520 491,525" />
+</g>
+<g>
+	<line stroke="black" stroke-opacity="1" x1="593" y1="559" x2="589" y2="551" />
+	<line stroke="black" stroke-opacity="1" x1="593" y1="559" x2="585" y2="562" />
+	<line stroke="black" stroke-opacity="1" x1="496" y1="520" x2="593" y2="559" />
+</g>
+<g>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="524" y="523">&lt;&lt;QSharedPointer&gt;&gt;</text>
+</g>
+<g>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="196" y="74">&lt;&lt;QSharedPointer&gt;&gt;</text>
+</g>
+<g>
+	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="175" y="255" width="2" height="56" />
+	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="37" y="309" width="140" height="2" />
+	<rect fill="#ededed" stroke="black" stroke-width="1" stroke-opacity="1" x="34" y="252" width="141" height="57" />
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="105" y="255">VRPlotPedals</text>
+	<line stroke="black" stroke-opacity="1" x1="34" y1="257" x2="175" y2="257" />
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="35" y="260">clutchPedal : QCPBars</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="35" y="265">accelPedal : QCPBars</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="35" y="270">brakePedal : QCPBars</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="35" y="275">labels_vect : QString</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="35" y="280">ticks_vect : double</text>
+	<line stroke="black" stroke-opacity="1" x1="34" y1="282" x2="175" y2="282" />
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="35" y="285">VRPlotPedals()</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="35" y="290">setupPlot(inout customPlot : QCustomPlot, inout themeData : VRThemeData) : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="35" y="295">setTheme(inout themeData : VRThemeData) : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="35" y="300">pushData(in clutch : double, in brake : double, in accel : double) : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="35" y="305">changeLanguage() : void</text>
+</g>
+<g>
+	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="383" y="402" width="2" height="32" />
+	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="245" y="432" width="140" height="2" />
+	<rect fill="#ededed" stroke="black" stroke-width="1" stroke-opacity="1" x="242" y="399" width="141" height="33" />
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="313" y="402">VRPlotVelocity</text>
+	<line stroke="black" stroke-opacity="1" x1="242" y1="404" x2="383" y2="404" />
+	<line stroke="black" stroke-opacity="1" x1="242" y1="406" x2="383" y2="406" />
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="243" y="409">VRPlotVelocity()</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="243" y="414">setupPlot(inout customPlot : QCustomPlot, inout themeData : VRThemeData) : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="243" y="419">setTheme(inout themeData : VRThemeData) : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="243" y="424">pushData(in index : double, in data : double) : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="243" y="429">changeLanguage() : void</text>
+</g>
+<g>
+	<line stroke="#000000" stroke-opacity="1" x1="178" y1="282" x2="235" y2="282" />
+	<line stroke="#000000" stroke-opacity="1" x1="241" y1="282" x2="235" y2="276" />
+	<line stroke="#000000" stroke-opacity="1" x1="241" y1="282" x2="235" y2="288" />
+	<line stroke="#000000" stroke-opacity="1" x1="235" y1="276" x2="235" y2="288" />
+</g>
+<g>
+	<line stroke="#000000" stroke-opacity="1" x1="314" y1="398" x2="314" y2="332" />
+	<line stroke="#000000" stroke-opacity="1" x1="314" y1="326" x2="308" y2="332" />
+	<line stroke="#000000" stroke-opacity="1" x1="314" y1="326" x2="320" y2="332" />
+	<line stroke="#000000" stroke-opacity="1" x1="308" y1="332" x2="320" y2="332" />
+</g>
+<g>
+	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="419" y="590" width="2" height="46" />
+	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="361" y="634" width="60" height="2" />
+	<rect fill="#ededed" stroke="black" stroke-width="1" stroke-opacity="1" x="358" y="587" width="61" height="47" />
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="389" y="590">VRDataInterfaceAC</text>
+	<line stroke="black" stroke-opacity="1" x1="358" y1="592" x2="419" y2="592" />
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="359" y="595">accessStatic : QSharedMemory</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="359" y="600">accessPhysics : QSharedMemory</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="359" y="605">accessGraphics : QSharedMemory</text>
+	<line stroke="black" stroke-opacity="1" x1="358" y1="607" x2="419" y2="607" />
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="359" y="610">VRDataInterfaceAC()</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="359" y="615">~VRDataInterfaceAC()</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="359" y="620">start() : bool</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="359" y="625">stop() : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="359" y="630">update() : bool</text>
+</g>
+<g>
+	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="539" y="600" width="2" height="36" />
+	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="497" y="634" width="44" height="2" />
+	<rect fill="#ededed" stroke="black" stroke-width="1" stroke-opacity="1" x="494" y="597" width="45" height="37" />
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="517" y="600">VRDataInterfaceR3E</text>
+	<line stroke="black" stroke-opacity="1" x1="494" y1="602" x2="539" y2="602" />
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="495" y="605">access : QSharedMemory</text>
+	<line stroke="black" stroke-opacity="1" x1="494" y1="607" x2="539" y2="607" />
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="495" y="610">VRDataInterfaceR3E()</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="495" y="615">~VRDataInterfaceR3E()</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="495" y="620">start() : bool</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="495" y="625">stop() : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="495" y="630">update() : bool</text>
+</g>
+<g>
+	<line stroke="#000000" stroke-opacity="1" x1="404" y1="586" x2="425" y2="548" />
+	<line stroke="#000000" stroke-opacity="1" x1="429" y1="543" x2="420" y2="545" />
+	<line stroke="#000000" stroke-opacity="1" x1="429" y1="543" x2="431" y2="551" />
+	<line stroke="#000000" stroke-opacity="1" x1="420" y1="545" x2="431" y2="551" />
+</g>
+<g>
+	<line stroke="#000000" stroke-opacity="1" x1="503" y1="596" x2="468" y2="547" />
+	<line stroke="#000000" stroke-opacity="1" x1="465" y1="543" x2="463" y2="551" />
+	<line stroke="#000000" stroke-opacity="1" x1="465" y1="543" x2="473" y2="544" />
+	<line stroke="#000000" stroke-opacity="1" x1="463" y1="551" x2="473" y2="544" />
+</g>
+<g>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="572" y="515">buffer</text>
+</g>
+<g>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="209" y="66">itsCurrentMessage</text>
+</g>
+<g>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="370" y="526">dataInterface</text>
+</g>
+<g>
+	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="309" y="507" width="2" height="60" />
+	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="219" y="565" width="92" height="2" />
+	<rect fill="#ededed" stroke="black" stroke-width="1" stroke-opacity="1" x="216" y="504" width="93" height="61" />
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="263" y="507">VRSimulationManager</text>
+	<line stroke="black" stroke-opacity="1" x1="216" y1="509" x2="309" y2="509" />
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="217" y="512">timerId : int</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="217" y="517">running : bool</text>
+	<line stroke="black" stroke-opacity="1" x1="216" y1="519" x2="309" y2="519" />
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="217" y="522">waitForSim() : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="217" y="527">connectToSharedMemory() : bool</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="217" y="532">free() : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="217" y="537">VRSimulationManager()</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="217" y="542">~VRSimulationManager()</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="217" y="547">isRunning() : bool</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="217" y="552">getDataInterface() : QSharedPointer&lt;VRDataInterface&gt;</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="217" y="557">start() : bool</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="217" y="562">timerEvent(inout event : QTimerEvent) : void</text>
+</g>
+<g>
+	<line stroke="black" stroke-opacity="1" x1="407" y1="527" x2="400" y2="521" />
+	<line stroke="black" stroke-opacity="1" x1="407" y1="527" x2="401" y2="533" />
+	<line stroke="black" stroke-opacity="1" x1="312" y1="530" x2="407" y2="527" />
+	<polygon fill="#000000" stroke="black" stroke-opacity="1" points="312,530 317,523 323,529 318,535" />
+</g>
+<g>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="335" y="518">&lt;&lt;QSharedPointer&gt;&gt;</text>
+</g>
+</svg>
