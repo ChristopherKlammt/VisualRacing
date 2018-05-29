@@ -129,22 +129,21 @@ bool VRDataInterfaceR3E::update() {
                 this->shiftTimeData.gearChangeStart = VRUtilities::getCurrentTime();
                 this->shiftTimeData.changedToNeutral = true;
             }
-            else if (this->buffer->getGear() > this->shiftTimeData.lastGear)
+            else if (this->shiftTimeData.changedToNeutral && this->buffer->getGear() != 0)
             {
                 this->shiftTimeData.gearChangeEnd = VRUtilities::getCurrentTime();
                 this->shiftTimeData.gearChanged = true;
-            }
-            else
-            {
-                // Stop!
+                this->shiftTimeData.newGear = this->buffer->getGear();
             }
         }
         if (this->buffer->getClutch() < 0.02f)
         {
             this->shiftTimeData.clutchDisengagedEnd = VRUtilities::getCurrentTime();
 
-            this->buffer->setClutchDisengagedTime((this->shiftTimeData.clutchDisengagedEnd - this->shiftTimeData.clutchDisengagedStart).count());
-            this->buffer->setGearChangeTime((this->shiftTimeData.gearChangeEnd - this->shiftTimeData.gearChangeStart).count());
+            if (this->shiftTimeData.gearChanged && this->shiftTimeData.newGear > this->shiftTimeData.lastGear) {
+                this->buffer->setClutchDisengagedTime((this->shiftTimeData.clutchDisengagedEnd - this->shiftTimeData.clutchDisengagedStart).count());
+                this->buffer->setGearChangeTime((this->shiftTimeData.gearChangeEnd - this->shiftTimeData.gearChangeStart).count());
+            }
             this->shiftTimeData = {};
         }
     }

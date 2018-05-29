@@ -216,7 +216,7 @@ Rectangle {
                     font.pixelSize: parent.height * 0.3
                     color: (false ? "lime" : "#798489") // COL
 
-                    text: "" + vrData.clutchDisengagedTime
+                    text: "-"
                 }
             }
 
@@ -237,7 +237,7 @@ Rectangle {
                     font.pixelSize: parent.height * 0.3
                     color: (false ? "lime" : "#798489") // COL
 
-                    text: "" + vrData.gearChangeTime
+                    text: "-"
                 }
             }
 

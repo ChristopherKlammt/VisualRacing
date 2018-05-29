@@ -13,6 +13,7 @@ private:
 
     struct ShiftTimeData {
         int lastGear;
+        int newGear;
 
         bool clutchDisengaged;
         std::chrono::milliseconds clutchDisengagedStart;
