@@ -6,21 +6,33 @@
 class VRMetrics : public QObject
 {
     Q_OBJECT
-    Q_PROPERTY(float upShiftBehaviour READ getUpShiftBehaviour WRITE setUpShiftBehaviour NOTIFY upShiftBehaviourChanged)
+    Q_PROPERTY(float accelBehav READ getAccelBehav WRITE setAccelBehav NOTIFY accelBehavChanged)
+    Q_PROPERTY(float avgAccelBehav READ getAvgAccelBehav WRITE setAvgAccelBehav NOTIFY avgAccelBehavChanged)
+    Q_PROPERTY(float shiftTime READ getShiftTime WRITE setShiftTime NOTIFY shiftTimeChanged)
 
 public:
     VRMetrics();
     ~VRMetrics();
 
-    float getUpShiftBehaviour() const;
-    void setUpShiftBehaviour(float upShiftBehaviour);
+    float getAccelBehav() const;
+    void setAccelBehav(float value);
+
+    float getAvgAccelBehav() const;
+    void setAvgAccelBehav(float value);
+
+    float getShiftTime() const;
+    void setShiftTime(float value);
 
 signals:
-    void upShiftBehaviourChanged();
+    void accelBehavChanged();
+    void avgAccelBehavChanged();
+    void shiftTimeChanged();
 
 private:
-    float upShiftBehaviour;
 
+    float accelBehav;
+    float avgAccelBehav;
+    float shiftTime;
 };
 
 #endif // VRMETRICS_H
