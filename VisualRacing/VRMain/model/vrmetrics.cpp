@@ -2,7 +2,9 @@
 
 VRMetrics::VRMetrics()
 {
-    this->upShiftBehaviour = 0;
+    this->accelBehav = 0;
+    this->avgAccelBehav = 0;
+    this->shiftTime = 0;
 }
 
 VRMetrics::~VRMetrics()
@@ -10,13 +12,35 @@ VRMetrics::~VRMetrics()
 
 }
 
-float VRMetrics::getUpShiftBehaviour() const
+float VRMetrics::getAccelBehav() const
 {
-    return this->upShiftBehaviour;
+    return this->accelBehav;
 }
 
-void VRMetrics::setUpShiftBehaviour(float upShiftBehaviour)
+void VRMetrics::setAccelBehav(float value)
 {
-    this->upShiftBehaviour = upShiftBehaviour;
-    emit upShiftBehaviourChanged();
+    this->accelBehav = value;
+    emit this->accelBehavChanged();
+}
+
+float VRMetrics::getAvgAccelBehav() const
+{
+    return this->avgAccelBehav;
+}
+
+void VRMetrics::setAvgAccelBehav(float value)
+{
+    this->avgAccelBehav = value;
+    emit this->avgAccelBehavChanged();
+}
+
+float VRMetrics::getShiftTime() const
+{
+    return this->shiftTime;
+}
+
+void VRMetrics::setShiftTime(float value)
+{
+    this->shiftTime = value;
+    emit this->shiftTimeChanged();
 }

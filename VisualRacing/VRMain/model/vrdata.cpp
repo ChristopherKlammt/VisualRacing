@@ -85,6 +85,9 @@ VRData::VRData()
     this->tireGripRL = 0.0f;
 
     this->lapDistance = 0.0f;
+
+    this->clutchDisengagedTime = 0l;
+    this->gearChangeTime = 0l;
 }
 
 double VRData::getTimeInSeconds()
@@ -945,4 +948,26 @@ void VRData::setLapDistance(float value)
 
     lapDistance = value;
     emit lapDistanceChanged();
+}
+
+long VRData::getClutchDisengagedTime() const
+{
+    return clutchDisengagedTime;
+}
+
+void VRData::setClutchDisengagedTime(long value)
+{
+    clutchDisengagedTime = value;
+    emit clutchDisengagedTimeChanged();
+}
+
+long VRData::getGearChangeTime() const
+{
+    return gearChangeTime;
+}
+
+void VRData::setGearChangeTime(long value)
+{
+    gearChangeTime = value;
+    emit gearChangeTimeChanged();
 }

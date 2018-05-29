@@ -92,6 +92,9 @@ class VRData : public QObject
 
     Q_PROPERTY(float lapDistance READ getLapDistance WRITE setLapDistance NOTIFY lapDistanceChanged)
 
+    Q_PROPERTY(long clutchDisengagedTime READ getClutchDisengagedTime WRITE setClutchDisengagedTime NOTIFY clutchDisengagedTimeChanged)
+    Q_PROPERTY(long gearChangeTime READ getGearChangeTime WRITE setGearChangeTime NOTIFY gearChangeTimeChanged)
+
 public:
     VRData();
 
@@ -280,6 +283,12 @@ public:
     float getLapDistance() const;
     void setLapDistance(float value);
 
+    long getClutchDisengagedTime() const;
+    void setClutchDisengagedTime(long value);
+
+    long getGearChangeTime() const;
+    void setGearChangeTime(long value);
+
 signals:
     void gearChanged();
     void velocityChanged();
@@ -360,6 +369,9 @@ signals:
     void tireGripRLChanged();
 
     void lapDistanceChanged();
+
+    void clutchDisengagedTimeChanged();
+    void gearChangeTimeChanged();
 
 private:
     //
@@ -505,6 +517,10 @@ private:
 
     // Lap distance information
     float lapDistance;
+
+    // Shift time info for analytics
+    long clutchDisengagedTime;
+    long gearChangeTime;
 
     /* TODO:
     Things that might be added later:
