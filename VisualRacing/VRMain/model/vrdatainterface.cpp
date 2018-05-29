@@ -12,6 +12,6 @@ QSharedPointer<VRData> VRDataInterface::getBuffer() {
     return this->buffer;
 }
 
-const wchar_t* VRDataInterface::getProcessName(){
+const wchar_t* VRDataInterface::getProcessName() {
     return this->processName;
 }
