@@ -10,4 +10,5 @@ QSharedPointer<VRDataInterface> VRDataInterfaceFactory::createInterface(Simulati
     {
         return QSharedPointer<VRDataInterface>(new VRDataInterfaceR3E());
     }
+    return nullptr;
 }
