@@ -2,6 +2,7 @@
 
 VRSimulationManager::VRSimulationManager() {
     this->running = false;
+    this->timerId = -1;
 }
 
 VRSimulationManager::~VRSimulationManager() {

@@ -44,6 +44,8 @@ private:
 
 VRTest::VRTest()
 {
+    this->settings = nullptr;
+    this->theme = nullptr;
 }
 
 void VRTest::initTestCase()

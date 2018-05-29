@@ -20,11 +20,11 @@ public slots:
     void changeLanguage();
 
 private:
-    int itsMaxRpm = 8000;
+    int itsMaxRpm;
     double itsGearMultiplier;
 
-    int itsLastGear = 0;
-    double itsLastGearDouble = 0;
+    int itsLastGear;
+    double itsLastGearDouble;
 
 };
 

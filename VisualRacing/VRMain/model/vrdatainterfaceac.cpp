@@ -7,12 +7,15 @@
 VRDataInterfaceAC::VRDataInterfaceAC() : VRDataInterface(vrconstants::acProcessName) {
     this->accessStatic = QSharedPointer<QSharedMemory>(new QSharedMemory());
     this->accessStatic->setNativeKey(vrconstants::acSharedMemoryNameStatic);
+    this->nativeBufferStatic = nullptr;
 
     this->accessPhysics = QSharedPointer<QSharedMemory>(new QSharedMemory());
     this->accessPhysics->setNativeKey(vrconstants::acSharedMemoryNamePhysics);
+    this->nativeBufferPhysics = nullptr;
 
     this->accessGraphics = QSharedPointer<QSharedMemory>(new QSharedMemory());
     this->accessGraphics->setNativeKey(vrconstants::acSharedMemoryNameGraphcics);
+    this->nativeBufferGraphics = nullptr;
 }
 
 VRDataInterfaceAC::~VRDataInterfaceAC() {

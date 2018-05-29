@@ -31,7 +31,7 @@ private:
     QVector<double> sectorOne_data, sectorTwo_data, sectorThree_data;
     QVector<double> sum_vect;
 
-    int counter = 0;
+    int counter;
 };
 
 #endif // VRPLOTLAPTIMEBAR_H

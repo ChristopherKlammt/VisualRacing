@@ -3,6 +3,7 @@
 VRDataInterfaceR3E::VRDataInterfaceR3E() : VRDataInterface(vrconstants::r3eProcessName) {
     this->access = QSharedPointer<QSharedMemory>(new QSharedMemory());
     this->access->setNativeKey(vrconstants::r3eSharedMemoryName);
+    this->nativeBuffer = nullptr;
 }
 
 VRDataInterfaceR3E::~VRDataInterfaceR3E() {

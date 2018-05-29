@@ -3,7 +3,10 @@
 
 VRPlotLapTimeBar::VRPlotLapTimeBar() : VRPlotItem()
 {
-
+    this->sectorOne = nullptr;
+    this->sectorTwo = nullptr;
+    this->sectorThree = nullptr;
+    this->counter = 0;
 }
 
 void VRPlotLapTimeBar::pushData(double lap_time, double sector1, double sector2, double sector3, double best)

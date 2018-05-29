@@ -2,7 +2,9 @@
 
 VRPlotPedals::VRPlotPedals() : VRPlotItem()
 {
-
+    this->accelPedal = nullptr;
+    this->brakePedal = nullptr;
+    this->clutchPedal = nullptr;
 }
 
 void VRPlotPedals::pushData(double clutch, double brake, double accel)

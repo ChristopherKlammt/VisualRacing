@@ -16,9 +16,9 @@ public:
 
     Q_INVOKABLE void pushData(double clutch, double brake, double accel);
 
-    QCPBars* clutchPedal;
     QCPBars* accelPedal;
     QCPBars* brakePedal;
+    QCPBars* clutchPedal;
 
     QVector<QString> labels_vect;
     QVector<double> ticks_vect;

@@ -2,7 +2,10 @@
 
 VRPlotRPM::VRPlotRPM()
 {
-
+    this->itsMaxRpm = 8000;
+    this->itsGearMultiplier = 1;
+    this->itsLastGear = 0;
+    this->itsLastGearDouble = 0.0;
 }
 
 void VRPlotRPM::pushData(double index, double data, int gear)
