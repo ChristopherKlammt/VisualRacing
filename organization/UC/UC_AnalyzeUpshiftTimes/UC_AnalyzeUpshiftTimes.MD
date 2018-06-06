@@ -1,5 +1,4 @@
-# Use-Case Specification: Analyze Driving Behavior
-
+# Use-Case Specification: Analyze Upshift Times
 # Table of Contents
 - [Analyze Upshift Times](#1-analyze-upshift-times)
     - [Brief Description](#11-brief-description)
