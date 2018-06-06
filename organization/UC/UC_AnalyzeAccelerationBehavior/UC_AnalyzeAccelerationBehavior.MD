@@ -1,4 +1,4 @@
-# Use-Case Specification: Analyze Driving Behavior
+# Use-Case Specification: Analyze Acceleration Behavior
 
 # Table of Contents
 - [Analyze Acceleration Behavior](#1-analyze-acceleration-behavior)
