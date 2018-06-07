@@ -4,6 +4,8 @@ VRDataInterfaceR3E::VRDataInterfaceR3E() : VRDataInterface(vrconstants::r3eProce
     this->access = QSharedPointer<QSharedMemory>(new QSharedMemory());
     this->access->setNativeKey(vrconstants::r3eSharedMemoryName);
     this->nativeBuffer = nullptr;
+  
+    this->shiftTimeData = {};
 }
 
 VRDataInterfaceR3E::~VRDataInterfaceR3E() {
@@ -13,7 +15,7 @@ VRDataInterfaceR3E::~VRDataInterfaceR3E() {
 bool VRDataInterfaceR3E::start() {
     bool success = this->access->attach(QSharedMemory::AccessMode::ReadOnly);
     if (success)
-        this->nativeBuffer = (r3e_shared*)this->access->data();
+        this->nativeBuffer = static_cast<r3e_shared*>(this->access->data());
 
     return success;
 }
@@ -27,6 +29,9 @@ bool VRDataInterfaceR3E::update() {
         return false;
 
     // TODO: Static information like playerName, carName and trackName do not need to be set every update.
+
+    if(!this->shiftTimeData.clutchDisengaged)
+        this->shiftTimeData.lastGear = this->buffer->getGear();
 
     this->buffer->setGear(this->nativeBuffer->gear == -2 ? 0 : this->nativeBuffer->gear);
     this->buffer->setVelocity(qMax(this->nativeBuffer->car_speed * 3.6f, 0.0f)); // Conversion from m/s to km/h
@@ -105,6 +110,47 @@ bool VRDataInterfaceR3E::update() {
     this->buffer->setTireGripRL(qMax(this->nativeBuffer->tire_grip[R3E_TIRE_REAR_LEFT], 0.0f));
 
     this->buffer->setLapDistance(qMax(this->nativeBuffer->lap_distance, 0.0f));
+
+    // Calculate clutchDisengagedTime and gearChangeTime.
+
+    if (!this->shiftTimeData.clutchDisengaged)
+    {
+        if (this->buffer->getClutch() > 0.03f)
+        {
+            this->shiftTimeData.clutchDisengagedStart = VRUtilities::getCurrentTime();
+            this->shiftTimeData.clutchDisengaged = true;
+        }
+    }
+    else
+    {
+        if (!this->shiftTimeData.gearChanged && this->buffer->getGear() != this->shiftTimeData.lastGear)
+        {
+            if (!this->shiftTimeData.changedToNeutral && this->buffer->getGear() == 0)
+            {
+                this->shiftTimeData.gearChangeStart = VRUtilities::getCurrentTime();
+                this->shiftTimeData.changedToNeutral = true;
+            }
+            else if (this->shiftTimeData.changedToNeutral && this->buffer->getGear() != 0)
+            {
+                this->shiftTimeData.gearChangeEnd = VRUtilities::getCurrentTime();
+                this->shiftTimeData.gearChanged = true;
+                this->shiftTimeData.newGear = this->buffer->getGear();
+            }
+        }
+        if (this->buffer->getClutch() < 0.02f)
+        {
+            this->shiftTimeData.clutchDisengagedEnd = VRUtilities::getCurrentTime();
+
+            if (this->shiftTimeData.gearChanged && this->shiftTimeData.newGear > this->shiftTimeData.lastGear) {
+                this->buffer->setClutchDisengagedTime((this->shiftTimeData.clutchDisengagedEnd - this->shiftTimeData.clutchDisengagedStart).count());
+                this->buffer->setGearChangeTime((this->shiftTimeData.gearChangeEnd - this->shiftTimeData.gearChangeStart).count());
+            }
+            this->shiftTimeData = {};
+        }
+    }
+
+    // all components of accel Behave calculation are updated
+    emit this->buffer->accelBehavChanged();
 
     return true;
 }

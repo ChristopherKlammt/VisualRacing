@@ -1,7 +1,7 @@
 # Use-Case Specification: Display General Data
 
 # Table of Contents
-- [Display Car Data](#1-display-car-data)
+- [Display General Data](#1-display-general-data)
     - [Brief Description](#11-brief-description)
     - [Mockup](#12-mockup)
     - [Screenshot](#13-screenshot)
@@ -14,7 +14,7 @@
 - [Postconditions](#5-postconditions)
 - [Function Points](#6-function-points)
 
-# 1. Display Car Data
+# 1. Display General Data
 ## 1.1 Brief Description
 The application is divided into a few tabs and the purpose of this use case is for the user to switch to the tab 'General Data'. 
 For the tab to load all of the visualizations, graphs and tables the connection to the datainterface has to be established. Then the necassary data is mapped to the graphs. Additionally, the settings have to be loaded to apply how the application should look, which language and unit system to use.

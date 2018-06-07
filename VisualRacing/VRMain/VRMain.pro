@@ -36,8 +36,8 @@ SOURCES += main.cpp \
     view/vrthemedata.cpp
 
 RESOURCES += qml.qrc \
-    recources.qrc \
-    translations.qrc
+    translations.qrc \
+    resources.qrc
 
 TRANSLATIONS = Deutsch.ts
 

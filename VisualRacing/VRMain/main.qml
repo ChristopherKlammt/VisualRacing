@@ -29,6 +29,22 @@ Window {
             return (pressureInBar * 14.5038).toFixed(1) + qsTr(" psi") + vrMainWindow.emptyString;
     }
 
+    function gearIndexToChar(index) {
+        if (index === 0)
+            return 'N';
+        else if (index === -1)
+            return 'R';
+        return '' + index;
+    }
+
+    /* Percentage to color conversion */
+    function percToColor(p) {
+        var g = parseInt((0xFF * p).toFixed(0)).toString(16);
+        var r = parseInt((0xFF * (1 - p)).toFixed(0)).toString(16);
+
+        return "#" + (r.length < 2 ? "0" + r : r) + (g.length < 2 ? "0" + g : g) + "00";
+    }
+
     /* Tire temperature to color conversion */
     function tempToColor(t) { // TODO: Refactor.
         var cold = 60;
@@ -156,7 +172,7 @@ Window {
             tab: Rectangle {
                 color: if(styleData.title === ""){theme.appBackgroundColor}else{styleData.selected ? theme.tabBackgroundColor : theme.tabInactiveColor}         // all tabs with "" will be invisible
                 border.color: styleData.selected ? theme.tabBackgroundColor : theme.appBackgroundColor                                             // border width = 1 pixel
-                implicitWidth: if(styleData.title === ""){tabView_main.width - (79 * numberOfTabs)}else{80}         // text must be shorter than 80 pixels
+                implicitWidth: if(styleData.title === ""){tabView_main.width - (99 * numberOfTabs)}else{100}         // text must be shorter than 80 pixels
                 implicitHeight: 30
                 Text {
                     id: text_label

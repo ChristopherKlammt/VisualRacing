@@ -3,6 +3,7 @@
 
 #include <QSharedMemory>
 #include <QSharedPointer>
+#include <chrono>
 
 #include "vrdata.h"
 #include "vrconstants.h"

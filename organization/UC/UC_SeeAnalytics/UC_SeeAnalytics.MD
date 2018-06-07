@@ -1,7 +1,7 @@
 # Use-Case Specification: Display Analytics
 
 # Table of Contents
-- [Display Car Data](#1-display-car-data)
+- [Display Analytics](#1-display-analytics)
     - [Brief Description](#11-brief-description)
     - [Mockup](#12-mockup)
     - [Screenshot](#13-screenshot)

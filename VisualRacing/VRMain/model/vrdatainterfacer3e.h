@@ -11,6 +11,21 @@ private:
     QSharedPointer<QSharedMemory> access;
     r3e_shared* nativeBuffer;
 
+    struct ShiftTimeData {
+        int lastGear;
+        int newGear;
+
+        bool clutchDisengaged;
+        std::chrono::milliseconds clutchDisengagedStart;
+        std::chrono::milliseconds clutchDisengagedEnd;
+
+        bool changedToNeutral;
+        bool gearChanged;
+        std::chrono::milliseconds gearChangeStart;
+        std::chrono::milliseconds gearChangeEnd;
+    };
+    ShiftTimeData shiftTimeData;
+
 public:
     VRDataInterfaceR3E();
     ~VRDataInterfaceR3E();

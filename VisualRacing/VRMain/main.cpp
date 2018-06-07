@@ -72,7 +72,7 @@ int main(int argc, char *argv[])
     mainWindow.data()->setEngine(engine);
     mainWindow.data()->switchLanguage(settings.getLang());
 
-    bool uiDev = false;
+    bool uiDev = true;
     if (!uiDev) {
         simulationManager = QSharedPointer<VRSimulationManager>(new VRSimulationManager());
         simulationManager->start();
@@ -97,16 +97,14 @@ int main(int argc, char *argv[])
      * start Metrics calculation
      */
     QSharedPointer<VRMetrics> vrMetrics;
-    QSharedPointer<VRMetricsManager> vrMetricsManger;
+    QSharedPointer<VRMetricsManager> vrMetricsManager;
 
     vrMetrics = QSharedPointer<VRMetrics>(new VRMetrics());
-    vrMetricsManger = QSharedPointer<VRMetricsManager>(
+    vrMetricsManager = QSharedPointer<VRMetricsManager>(
                 new VRMetricsManager(vrMetrics, vrData));
 
     QThread* metricsManagerThread = new QThread;
-    vrMetricsManger->moveToThread(metricsManagerThread);
-    QObject::connect(metricsManagerThread, SIGNAL(started()),
-                     vrMetricsManger.data(), SLOT(start()));
+    vrMetricsManager->moveToThread(metricsManagerThread);
     metricsManagerThread->start();
 
     /*
@@ -127,6 +125,7 @@ int main(int argc, char *argv[])
     qmlRegisterType<VRPlotRPM>("VRPlot", 1, 0, "VRPlotRPM");
     qmlRegisterType<VRPlotPedalHistory>("VRPlot", 1, 0, "VRPlotPedalHistory");
     qmlRegisterType<VRSettings>("VRSettings", 1, 0, "VRSettings");
+    qmlRegisterType<VRMetrics>("VRMetrics", 1, 0, "VRMetrics");
 
     /*
      * load qml-file
@@ -135,13 +134,6 @@ int main(int argc, char *argv[])
     if (engine->rootObjects().isEmpty())
         return EXIT_FAILURE;
     int retVal = app.exec();
-
-    /*
-     * tidy up the running threads
-     */
-    vrMetricsManger->abort();
-    metricsManagerThread->quit();
-    metricsManagerThread->wait();
 
     return retVal;
 }

@@ -50,16 +50,14 @@ This document is designed for internal use only and will outline the development
 |[Blog](https://visualracing.wordpress.com/)|10/05/2017|
 |[GitHub](https://github.com/VisualRacing/VisualRacing)|10/23/2017|
 |[Software Architecture Document](https://github.com/VisualRacing/VisualRacing/blob/master/organization/SAD/SAD.MD)|12/10/2017|
-|[Test Plan](Test%20Plan.MD)|04/24/2018|
 |[Use Case Diagram](UC/Use%20Case%20Diagram.png)|10/23/2017|
 |[UC Change Settings](UC/UC_ChangeSettings/UC_ChangeSettings.MD)|10/25/2017|
 |[UC Read Data Stream](UC/UC_ReadDataStream/UC_ReadDataStream.MD)|10/25/2017|
 |[UC Car Data](UC/UC_CarData/UC_CarData.MD)|11/13/2017|
 |[UC Timing Data](UC/UC_TimingData/UC_TimingData.MD)|11/27/2017|
 |[UC General Data](UC/UC_GeneralData/UC_GeneralData.MD)|11/28/2017|
-|[UC Record and Save/Load Data](UC/UC_RecordSaveLoad/UC_RecordSaveLoad.MD)|04/09/2018|
-|[UC Analyze Laptime Improvement](UC/UC_AnalyzeLaptimeImprovement/UC_AnalyzeLaptimeImprovement.MD)|04/09/2018|
-|[UC Analyze Driving Behavior](UC/UC_AnalyzeDrivingBehavior/UC_AnalyzeDrivingBehavior.MD)|04/09/2018|
+|[UC Analyze Acceleration Behavior](UC/UC_AnalyzeAccelerationBehavior/UC_AnalyzeAccelerationBehavior.MD)|04/09/2018|
+|[UC Analyze Upshift Times](UC/UC_AnalyzeUpshiftTimes/UC_AnalyzeUpshiftTimes.MD)|04/09/2018|
 |[UC Display Analytics](UC/UC_SeeAnalytics/UC_SeeAnalytics.MD)|04/16/2018|
 |[Test Plan](Test%20Plan/Test%20Plan.MD)|04/27/2018|
 
@@ -97,9 +95,6 @@ The data, which is read, has to be transformed into a general data structure, so
 ### 3.1.3 Provide data
 To display the data, it has to be provided to the UI via an interface.
 
-### 3.1.4 Record and save/load data
-Instead of just reading and providing the data to the frontend, this functionality records the data stream and can be saved and loaded for analytic purposes.
-
 ## 3.2 Functionality – User Interface
 ### 3.2.1 General overview
 The general overview is somewhat of a home screen, which provides basic information at a glance and lets the user dive deeper into different datasets in form of tabs. ([Use-Case Specification](UC/UC_GeneralData/UC_GeneralData.MD))
@@ -123,17 +118,11 @@ Shows the current settings such as whether the metric or the imperial system sho
 Here the analyzed data will be visualized or textualized and be given as a feedback for the driver.
 
 ## 3.3 Functionality – Data Analytics
-### 3.3.1 Analyze lap time improvements
-Analyzes the sector times and gives hints for improving.
+### 3.3.1 Analyze acceleration behavior
+Based on tire grip, RPM and throttle position, we are analyzing whether the driver accelerates at the cars full potential and give hints on how he might be able to improve his driving style to decrease lap times. ([Use-Case Specification](UC/UC_AnalyzeAccelerationBehavior/UC_AnalyzeAccelerationBehavior.MD))
 
-### 3.3.2 Analyze driving behavior
-Tries to give helpful tips to improve the driving behavior based on the pedal position, shift-times etc.
-
-### 3.3.3 Analyze tire management
-Takes a look at the sector times, lap times, tire temperature and tire wear and analyzes this information.
-
-### 3.3.4 Analyze fuel consumption
-Analyzes the engines RPM, the gear, fuel consumption to give helpful feedback.
+### 3.3.2 Analyze upshift times
+We are measuring the time the driver needs to change to a higher gear and display insights into those times. ([Use-Case Specification](UC/UC_AnalyzeUpshiftTimes/UC_AnalyzeUpshiftTimes.MD))
 
 ## 3.4 Usability
 ### 3.4.1 Racing geeks

@@ -40,7 +40,7 @@ Rectangle{
         }
 
     }
-    Button {
+    /*Button {
         implicitWidth: 80
         implicitHeight: 30
         anchors.left: tabView_Analytics.left
@@ -65,5 +65,5 @@ Rectangle{
         function addNewTab(){
             console.log("here can stored data get loaded")
         }
-    }
+    }*/
 }
